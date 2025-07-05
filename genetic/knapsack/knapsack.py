@@ -4,6 +4,9 @@ class Knapsack():
         self.capacity = capacity
         self.weights = weights
         self.values = values
+
+        if not self.is_valid():
+            raise RuntimeError('Problem setup is not valid.')
     
     def is_valid(self):
         return ((self.capacity is not None)
@@ -14,8 +17,6 @@ class Knapsack():
                 and len(self.weights) == len(self.values))
     
     def test_solution(self, solution):
-        if not self.is_valid(self):
-            raise RuntimeError('Problem setup is not valid.')
         if len(solution) != len(self.weights):
             raise RuntimeError(f'Given solution does not match dimensionality, {len(self.weights)} != {len(solution)}.')
         

@@ -39,12 +39,5 @@ $S = (s_1, s_2, \ldots, s_n) \in \mathbb{R}^n$ and that every
 $s_i \in \{0, 1\}$.
 
 ## Objective
-Maximize function:
-$$
-f(S) = \sum_i^n s_i * v_i,
-$$
-
-subject to:
-$$
-\sum_i^n w_i * x_i \leq W.
-$$
+Maximize function: $f(S) = \sum_i^n s_i * v_i,$
+subject to: $\sum_i^n w_i * x_i \leq W$.
